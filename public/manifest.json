@@ -1,0 +1,9 @@
+{
+  "name": "PG Mess Food Requirement System",
+  "short_name": "PG Mess",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1efe6",
+  "theme_color": "#32483d",
+  "icons": []
+}
