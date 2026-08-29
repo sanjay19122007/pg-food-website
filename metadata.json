@@ -1,0 +1,6 @@
+{
+  "name": "PG Mess Food Requirement System",
+  "description": "Daily food requirement management and meal headcount tracking for PG residents, students and mess administrators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
