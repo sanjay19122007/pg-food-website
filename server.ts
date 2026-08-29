@@ -1,8 +1,6 @@
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
-import { router as apiRouter } from './server/routes.ts';
-import { db } from './server/db.ts';
 
 async function startServer() {
   const app = express();
@@ -12,16 +10,10 @@ async function startServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
-  // Initialize DB and default seeds
-  await db.init();
-
   // Health check endpoint
   app.get('/api/health', (_req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
   });
-
-  // Mount API router
-  app.use('/api', apiRouter);
 
   // Vite middleware in dev / Static server in prod
   if (process.env.NODE_ENV !== 'production') {
